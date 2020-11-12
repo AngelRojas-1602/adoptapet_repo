@@ -21,8 +21,7 @@ const mongoose = require("mongoose");
 var isProduction = process.env.NODE_ENV === 'production';
 
 mongoose.connect(
-    process.env.MONGODB_URI, // obtiene la url de conexión desde las variables de entorno
-    { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
+    process.env.MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
 const errorhandler = require('errorhandler')
